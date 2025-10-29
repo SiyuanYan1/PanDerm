@@ -2,9 +2,11 @@ import torch
 
 import pandas as pd
 from datasets.derm_data import Derm_Dataset
-from panderm_model.downstream.eval_features.metrics import get_eval_metrics, print_metrics,record_metrics_to_csv
+from panderm_model.downstream.eval_features.metrics import print_metrics,record_metrics_to_csv
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 from models import get_encoder
+
+torch.multiprocessing.set_sharing_strategy('file_descriptor'),
 
 import argparse
 def get_args_parser():

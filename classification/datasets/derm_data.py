@@ -1,12 +1,8 @@
 # import torchtoolbox.transform as transforms
-from torch.utils.data import Dataset, DataLoader, Subset
 import pandas as pd
-import os
 from PIL import Image
-import cv2
-import numpy as np
-import torchvision.transforms.functional as F
-import torch
+from torch.utils.data import Dataset
+
 class Derm_Dataset(Dataset):
     def __init__(self, df: pd.DataFrame, root, train=False,val=False,test=False,transforms=None,binary=False,data_percent=1):
         """
@@ -50,10 +46,7 @@ class Derm_Dataset(Dataset):
         # Apply transformations if any
         if x is not None and self.transforms:
             x = self.transforms(x)
-            if self.binary==True:
-                y = self.df.iloc[index]['binary_label']
-            else:
-                y = self.df.iloc[index]['label']
+            y = self.df.iloc[index]['binary_label'] if self.binary else self.df.iloc[index]['label']
         return x,y,filename
 
     def __len__(self):
