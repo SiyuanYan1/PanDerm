@@ -14,6 +14,7 @@
 </div>
   
 ## Updates
+- 04/11/2025: A Jupyter notebook for feature extraction and UMAP feature visualization is now available: [feature_extraction_and_umap.ipynb](https://github.com/SiyuanYan1/PanDerm/blob/main/classification/feature_extraction_and_umap.ipynb)
 - 29/04/2025: The ViT-base version of PanDerm (PanDerm_base) is now available, providing a smaller model for more widespread usage scenarios.
 - 26/04/2025: Released the finetuning script for image classification.
 
