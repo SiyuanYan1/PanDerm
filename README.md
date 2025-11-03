@@ -112,7 +112,7 @@ We've already pre-processed several public datasets to reproduce the results in 
 
 ## 3. Feature Extraction and UMAP Visualization
 
-The script is available in classification/feature_extraction_and_umap.ipynb
+The script is available in [classification/feature_extraction_and_umap.ipynb](classification/feature_extraction_and_umap.ipynb)
 
 ## 4. Linear Evaluation on Image Classification Tasks
 
