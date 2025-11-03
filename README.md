@@ -110,7 +110,11 @@ We've already pre-processed several public datasets to reproduce the results in 
 **Note:** The processed datasets provided here may differ slightly from those on the official websites. To ensure reproducibility of our paper's results, please use the processed data links above.
 </details>
 
-## 3. Linear Evaluation on Image Classification Tasks
+## 3. Feature Extraction and UMAP Visualization
+
+We provide the script in classification/feature_extraction_and_umap.ipynb
+
+## 4. Linear Evaluation on Image Classification Tasks
 
 Training and evaluation using the PAD-UFES dataset as an example. Replace the CSV path and root path with your own dataset.
 
@@ -150,7 +154,7 @@ cd classification
 bash script/lp_reproduce.sh
 ```
 
-## 4. Fine-tuning on Image Classification Tasks
+## 5. Fine-tuning on Image Classification Tasks
 
 ### Key Parameters
 
@@ -221,7 +225,7 @@ bash script/finetune_test.sh
 ```
 Note: Remember to adjust the `resume` argument to your storage location of finetuned model weights.
 
-## 5. Skin Lesion Segmentation
+## 6. Skin Lesion Segmentation
 
 Please refer to details [here](Segmentation.md).
 
